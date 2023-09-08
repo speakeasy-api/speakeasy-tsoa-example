@@ -2,7 +2,7 @@
 
 <a href="[Speakeasy](https://speakeasyapi.dev/)">
   <img src="https://github.com/speakeasy-api/speakeasy/assets/68016351/e959f81a-b250-4003-8c5c-a45b9463fc95" alt="Speakeasy Logo" width="400">
-<h2>Speakeasy Bar tsoa Example</h2>
+<h2>Speakeasy tsoa OpenAPI Example</h2>
 </a>
 
 </div>
