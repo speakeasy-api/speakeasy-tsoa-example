@@ -1,0 +1,14 @@
+# Drink
+
+Ok
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   | Example                                                                       |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `name`                                                                        | *string*                                                                      | :heavy_check_mark:                                                            | The name of the drink.                                                        | Old Fashioned                                                                 |
+| `price`                                                                       | *number*                                                                      | :heavy_check_mark:                                                            | The price of one unit of the drink in US cents.                               | 1000                                                                          |
+| `productCode`                                                                 | *string*                                                                      | :heavy_minus_sign:                                                            | The product code of the drink, only available when authenticated.             | SP-001                                                                        |
+| `stock`                                                                       | *number*                                                                      | :heavy_minus_sign:                                                            | The number of units of the drink in stock, only available when authenticated. | 102                                                                           |
+| `type`                                                                        | [DrinkType](../../models/shared/drinktype.md)                                 | :heavy_minus_sign:                                                            | The type of drink.                                                            |                                                                               |

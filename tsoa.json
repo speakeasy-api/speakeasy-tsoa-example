@@ -1,0 +1,52 @@
+{
+  "entryFile": "src/app.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/**/*Controller.ts"],
+  "spec": {
+    "outputDirectory": "build",
+    "specVersion": 3,
+    "name": "Custom API Name",
+    "description": "Custom API Description",
+    "license": "MIT",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Contact",
+      "email": "help@example.com",
+      "url": "http://example.com"
+    },
+    "tags": [
+      {
+        "name": "drinks",
+        "description": "Operations related to drinks",
+        "externalDocs": {
+          "description": "Find out more about drinks",
+          "url": "http://example.com"
+        }
+      },
+      {
+        "name": "bar",
+        "description": "Operations related to the bar"
+      },
+      {
+        "name": "update",
+        "description": "Update operations"
+      }
+    ],
+    "spec": {
+      "x-speakeasy-retries": {
+        "strategy": "backoff",
+        "backoff": {
+          "initialInterval": 500,
+          "maxInterval": 60000,
+          "maxElapsedTime": 3600000,
+          "exponent": 1.5
+        },
+        "statusCodes": ["5XX"],
+        "retryConnectionErrors": true
+      }
+    }
+  },
+  "routes": {
+    "routesDir": "build"
+  }
+}

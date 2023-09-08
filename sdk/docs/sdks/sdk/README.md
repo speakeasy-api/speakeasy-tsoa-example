@@ -1,0 +1,39 @@
+# SDK
+
+## Overview
+
+Custom API Name: Custom API Description
+
+### Available Operations
+
+* [listDrinks](#listdrinks)
+
+## listDrinks
+
+### Example Usage
+
+```typescript
+import { SDK } from "openapi";
+import { ListDrinksResponse } from "openapi/dist/sdk/models/operations";
+
+const sdk = new SDK();
+
+sdk.sdk.listDrinks().then((res: ListDrinksResponse) => {
+  if (res.statusCode == 200) {
+    // handle response
+  }
+});
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `retries`                                                           | [utils.RetryConfig](../../models/utils/retryconfig.md)              | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+
+
+### Response
+
+**Promise<[operations.ListDrinksResponse](../../models/operations/listdrinksresponse.md)>**
+
