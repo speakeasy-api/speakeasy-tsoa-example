@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "build/src/server.js",
   "scripts": {
-    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
-    "build": "tsoa spec-and-routes && tsc",
+    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\" \"nodemon -x tsoa spec --yaml\"",
+    "build": "tsoa spec-and-routes && tsoa spec --yaml && tsc",
     "start": "node build/src/server.js",
-    "spec": "tsoa spec --yaml",
-    "spec-and-sdk": "tsoa spec --yaml && tsoa spec-and-routes && tsc && speakeasy generate sdk --schema build/swagger.json --lang typescript --out ./sdk"
+    "spec": "tsoa spec && tsoa spec --yaml",
+    "spec-and-sdk": "tsoa spec-and-routes tsoa spec --yaml && && tsc && speakeasy generate sdk --schema build/swagger.json --lang typescript --out ./sdk"
   },
   "description": "Speakeasy Bar API",
   "author": "Speakeasy Support <support@speakeasy.bar> (https://support.speakeasy.bar)",
