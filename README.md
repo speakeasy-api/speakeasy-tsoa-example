@@ -11,7 +11,6 @@
 
 </div>
 
-<hr />
 
 <h2>Speakeasy tsoa OpenAPI Example</h2>
 
